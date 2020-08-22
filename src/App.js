@@ -2,6 +2,7 @@ import React from 'react';
 import { useAsync } from 'react-async';
 import './App.css';
 
+import AppHeader from './components/AppHeader/AppHeader';
 import PropertyList from './components/PropertyList/PropertyList';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen';
 
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <div className="App">
+      <AppHeader />
       <PropertyList listings={data} />
     </div>
   );

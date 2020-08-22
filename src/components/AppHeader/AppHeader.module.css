@@ -1,0 +1,20 @@
+.header {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+  padding: 0 1em;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 50;
+  background: #fff;
+}
+
+.logo {
+  width: 150px;
+  margin-top: -5px; /* Offset the awkward logo height */
+}
+

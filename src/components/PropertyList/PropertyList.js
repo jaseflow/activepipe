@@ -1,6 +1,8 @@
 import React from 'react';
 import PropertyCard from '../PropertyCard/PropertyCard'
 
+import styles from './PropertyList.module.css'
+
 function PropertyList(props) {
   const listings = props.listings;
   const listingsList = listings.map((l) => 
@@ -16,7 +18,7 @@ function PropertyList(props) {
     />
   );
   return (
-    <div className="PropertyList">
+    <div className={styles.list}>
       {listingsList}
     </div>
   )

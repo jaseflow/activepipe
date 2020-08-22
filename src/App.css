@@ -4,11 +4,14 @@
   padding: 0;
 }
 
+body {
+  background: #f2f2f2;
+}
+
 img {
   max-width: 100%;
 }
 
-.Loading {
-  min-height: 100vh;
-  background: #222;
+.App {
+  padding-top: 60px; /* Escape sticky header */
 }
