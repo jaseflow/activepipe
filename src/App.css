@@ -3,3 +3,12 @@
   margin: 0;
   padding: 0;
 }
+
+img {
+  max-width: 100%;
+}
+
+.Loading {
+  min-height: 100vh;
+  background: #222;
+}

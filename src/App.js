@@ -3,6 +3,7 @@ import { useAsync } from 'react-async';
 import './App.css';
 
 import PropertyList from './components/PropertyList/PropertyList';
+import LoadingScreen from './components/LoadingScreen/LoadingScreen';
 
 const loadListings = async () =>
   await fetch('/challenge/properties')
@@ -11,7 +12,7 @@ const loadListings = async () =>
 
 function App() {
   const {data, error, isLoading } = useAsync({ promiseFn: loadListings })
-  if (isLoading) return "Loading..."
+  if (isLoading) return <LoadingScreen />
   if (error) return `Something went wrong ${error.message}`
   if (data)
 
