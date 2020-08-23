@@ -10,7 +10,7 @@ function AppHeader(props) {
   return (
     <div className={styles.header}>
       <img src={logo} alt="ActivePipe" className={styles.logo} />
-      <button className={styles.filter}>
+      <button className={`icon-button ${styles.filter}`}>
         <FontAwesomeIcon icon={faFilter} onClick={props.toggleFilters} />
         {props.filterCount > 0 &&
           <i className={styles.filterCount}>{props.filterCount}</i>

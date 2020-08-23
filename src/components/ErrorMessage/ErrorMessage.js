@@ -13,7 +13,7 @@ function ErrorMessage(props) {
         Uh-oh&hellip; it looks like some things haven't loaded correctly
       </p>
       <div className={styles.action}>
-        <button className={styles.reload}>
+        <button className="icon-button">
           <FontAwesomeIcon icon={faSyncAlt} onClick={props.reload} />
         </button>
       </div>

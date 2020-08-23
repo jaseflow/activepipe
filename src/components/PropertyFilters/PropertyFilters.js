@@ -22,7 +22,7 @@ function PropertyFilters(props) {
   return (
     <div className={`${styles.filters} ${props.visible ? styles.visible : ''}`}>
       <div className={styles.body}>
-        <button onClick={props.close} className={styles.close}>
+        <button onClick={props.close} className={`icon-button ${styles.close}`}>
           <FontAwesomeIcon icon={faChevronDown} />
         </button>
         <h4 className="heading">Filter results</h4>

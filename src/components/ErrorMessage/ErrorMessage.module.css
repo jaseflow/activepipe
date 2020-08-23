@@ -13,17 +13,6 @@
   text-align: right;
 }
 
-.reload {
-  background: none;
-  color: inherit;
-  border: 0;
-  outline: 0;
-  width: 44px;
-  height: 44px;
-  line-height: 44px;
-  text-align: center;
-}
-
 @media(min-width: 768px) {
   .box {
     display: flex;

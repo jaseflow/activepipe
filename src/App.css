@@ -68,3 +68,14 @@ img {
 .btn--block {
   width: 100%;
 }
+
+.icon-button {
+  color: inherit;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  background: none;
+  border: 0;
+  outline: 0;
+}
