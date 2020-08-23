@@ -4,6 +4,7 @@ import './App.css';
 import AppHeader from './components/AppHeader/AppHeader';
 import PropertyList from './components/PropertyList/PropertyList';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen';
+import ErrorMessage from './components/ErrorMessage/ErrorMessage';
 import PropertyFilters from './components/PropertyFilters/PropertyFilters';
 
 function App() {
@@ -33,18 +34,25 @@ function App() {
     }
   }
 
+  function handleReload() {
+    setLoading(true);
+    fetchData();
+  }
+
+  async function fetchData() {
+    try {
+      const response = await fetch('/challenge/properties');
+      const data = await response.json();
+      setListings(d => data);
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+      setError(error);
+    }
+  }
+
   // Fetch data
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await fetch('/challenge/properties');
-        const data = await response.json();
-        setListings(d => data);
-        setLoading(false);
-      } catch (error) {
-        setError(error);
-      }
-    }
     fetchData();
   }, []);
 
@@ -63,7 +71,7 @@ function App() {
   }, [filters, listings]);
 
   if (loading) return <LoadingScreen />
-  if (error) return `Something went wrong ${error.message}`
+  if (error) return <ErrorMessage reload={handleReload} />
   if (listings)
 
   return (

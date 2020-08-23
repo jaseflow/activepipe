@@ -1,10 +1,10 @@
 import React from 'react';
-import './LoadingScreen.css';
+import styles from './LoadingScreen.module.css';
 
 function LoadingScreen() {
   return (
-    <div className="LoadingScreen">
-      <div className="LoadingScreen__spinner"></div>
+    <div className={styles.screen}>
+      <div className={styles.spinner}></div>
     </div>
   )
 }

@@ -5,7 +5,7 @@ import styles from './PropertyList.module.css'
 
 function PropertyList(props) {
   const listings = props.listings;
-  const listingsList = listings.map((l) => 
+  const listingsList = listings.length && listings.map((l) => 
     <PropertyCard
       price={l.price}
       status={l.status}
