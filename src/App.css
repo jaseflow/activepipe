@@ -15,3 +15,45 @@ img {
 .App {
   padding-top: 60px; /* Escape sticky header */
 }
+
+.heading {
+  font-size: 12px;
+  color: #111;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  height: 44px;
+}
+
+.checkbox input {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #44A0B5;
+  margin-right: 8px;
+  transition: background 375ms ease;
+}
+
+.checkbox input:checked {
+  background: #44A0B5;
+}
+
+.btn {
+  background: #44A0B5;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+  border: 0;
+  color: #fff;
+  outline: 0;
+  height: 44px;
+  padding: 0 16px;
+}
+
+.btn--block {
+  width: 100%;
+}

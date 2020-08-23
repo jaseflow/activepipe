@@ -1,0 +1,45 @@
+.filters {
+  position: fixed;
+  top: 60px;
+  left: 100%;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: flex-end;
+}
+
+.visible {
+  transform: translateX(-100%);
+}
+
+.body {
+  background: #fff;
+  box-shadow: 0 -5px 10px rgba(0,0,0,0.25);
+  padding: 1em;
+  width: 100%;
+  position: relative;
+  transition: transform 375ms ease;
+  transform: translateY(100%);
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  background: none;
+  border: 0;
+}
+
+.visible .body {
+  transform: translateY(0);
+}
+
+.bottom {
+  margin-bottom: 24px;
+}

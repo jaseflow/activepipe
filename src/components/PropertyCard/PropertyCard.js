@@ -11,10 +11,15 @@ function PropertyCard(props) {
   } else if (props.status === 'off_market') {
     statusClass = styles.statusOffMarket
   }
+
+  const formatter = new Intl.NumberFormat('en-AU', {
+    style: 'currency',
+    currency: 'AUD'
+  })
   return (
-    <div className={`${styles.card} Card`}>
-      <header class={styles.header}>
-        {props.price}
+    <div className={styles.card}>
+      <header className={styles.header}>
+        {formatter.format(props.price).replace(/\D00$/, '')}
         <div className={styles.status}>
           <i className={`${styles.statusIcon} ${statusClass}`}></i>
           <span className={styles.statusText}>{props.status.replace('_',' ')}</span>
