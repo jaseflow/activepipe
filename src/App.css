@@ -27,6 +27,16 @@ img {
   display: flex;
   align-items: center;
   height: 44px;
+  text-transform: capitalize;
+  padding: 0 12px;
+  margin-left: -12px;
+  margin-right: -12px;
+  transition: background 200ms ease;
+  cursor: pointer;
+}
+
+.checkbox:hover {
+  background: #f9f9f9;
 }
 
 .checkbox input {

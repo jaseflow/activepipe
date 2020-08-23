@@ -6,6 +6,19 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import styles from './PropertyFilters.module.css';
  
 function PropertyFilters(props) {
+  const filters = [
+    "current",
+    "sold",
+    "off_market"
+  ]
+
+  const filtersList = filters.map((f) =>
+    <label htmlFor={f} className="checkbox" key={f}>
+      <input type="checkbox" name={f} id={f} onChange={props.setFilter} />
+      {f.replace('_',' ')}
+    </label>
+  );
+
   return (
     <div className={`${styles.filters} ${props.visible ? styles.visible : ''}`}>
       <div className={styles.body}>
@@ -14,20 +27,9 @@ function PropertyFilters(props) {
         </button>
         <h4 className="heading">Filter results</h4>
         <div className={styles.bottom}>
-          <label htmlFor="current" className="checkbox">
-            <input type="checkbox" id="current" onChange={props.applyFilter} />
-            Current
-          </label>
-          <label htmlFor="sold" className="checkbox">
-            <input type="checkbox" id="sold" />
-            Sold
-          </label>
-          <label htmlFor="off-market" className="checkbox">
-            <input type="checkbox" id="off-market" />
-            Off market
-          </label>
+          {filtersList}
         </div>
-        <button className={`btn btn--block ${styles.action}`}>Apply filters</button>
+        <button className={`btn btn--block ${styles.action}`} onClick={props.close}>Done</button>
       </div>
     </div>
   )
