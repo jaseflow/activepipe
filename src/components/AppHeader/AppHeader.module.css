@@ -18,3 +18,17 @@
   margin-top: -5px; /* Offset the awkward logo height */
 }
 
+.filter {
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  background: none;
+  border: 0;
+}
+
+@media(min-width: 1024px) {
+  .filter {
+    display: none;
+  }
+}

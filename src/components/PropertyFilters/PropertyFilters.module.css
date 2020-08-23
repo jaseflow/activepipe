@@ -43,3 +43,33 @@
 .bottom {
   margin-bottom: 24px;
 }
+
+@media(min-width: 1024px) {
+
+  .filters {
+    left: 0;
+    top: 72px; /* header height + 12px */
+    bottom: auto;
+    width: 240px;
+    background: none;
+  }
+
+  .action {
+    display: none;
+  }
+
+  .body {
+    background: none;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .bottom {
+    margin-bottom: 0;
+  }
+
+  .close {
+    display: none;
+  }
+
+}
