@@ -26,6 +26,7 @@
   background: none;
   border: 0;
   position: relative;
+  outline: 0;
 }
 
 .filterCount {

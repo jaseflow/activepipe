@@ -46,6 +46,7 @@ img {
   border: 2px solid #44A0B5;
   margin-right: 8px;
   transition: background 375ms ease;
+  outline: 0;
 }
 
 .checkbox input:checked {
